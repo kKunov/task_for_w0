@@ -2,9 +2,8 @@ def reduce_lines(path):
     new_path = ""
     for index, element in enumerate(path):
         if index != 0 and \
-        ((element == '/' and new_path[len(new_path)-1] != '/') or element !='/') and \
-        ((index == len(path) - 1 and element != '/') \
-        or index != len(path) - 1):
+            ((element == '/' and new_path[len(new_path)-1] != '/') or element != '/') and \
+            ((index == len(path) - 1 and element != '/') or index != len(path) - 1):
             new_path += element
         elif index == 0:
             new_path += element
@@ -18,7 +17,7 @@ def reduce_double_dot(path):
     i2 = 0
     i3 = 0
     for index, element in enumerate(path):
-        if element == "." and index != len(path) -1 and path[index + 1] == ".":
+        if element == "." and index != len(path) - 1 and path[index + 1] == ".":
             i2 = len(new_path) - 1
             while i <= 1:
                 if new_path[i2] == '/':
@@ -59,4 +58,4 @@ def reduce_file_path(path):
     return path
 
 
-print(reduce_file_path("/srv/../asd/asd"))
+print(reduce_file_path("/srv/..//asd/asd/./ads"))
