@@ -25,7 +25,6 @@ def colums(matrix):
         j = 0
         i += 1
         if col_i != col0:
-            print("Col_i = %s" % (col_i))
             return False
     return col0
 

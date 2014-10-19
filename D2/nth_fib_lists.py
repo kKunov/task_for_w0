@@ -12,5 +12,4 @@ def nth_fib_lists(list_A, list_B, n):
         index += 1
     return fin_list
 
-
-print(nth_fib_lists([1, 2], [1, 3], 3))
+#print(nth_fib_lists([1, 2], [1, 3], 3))

@@ -14,6 +14,8 @@ def is_prime(n):  # Here I take the is_prime function form first set
 
 
 def goldbach(n):
+    if n % 2 != 0:
+        return "Error: Odd number!"
     i = 2
     prime_list = []
     while i < n:
@@ -25,6 +27,3 @@ def goldbach(n):
                 j += 1
         i += 1
     return prime_list
-
-
-print (goldbach(8))

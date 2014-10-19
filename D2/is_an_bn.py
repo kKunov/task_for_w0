@@ -10,11 +10,6 @@ def is_an_bn(word):
         word[index + 1] == 'b') or index == len(word) - 1:
             count_b += 1
     if count_a == count_b:
-        print("n = ", count_a)
         return True
     else:
-        print("a = {} b = {}".format(count_a, count_b))
         return False
-
-
-print(is_an_bn("aaaaaaaaaabbbbbbbb"))
